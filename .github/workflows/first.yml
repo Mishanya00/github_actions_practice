@@ -1,0 +1,14 @@
+name: My_First_Workflow
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  first_test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: echo_hello_world
+        run: echo "Hello, World!"
