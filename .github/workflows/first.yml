@@ -11,4 +11,5 @@ jobs:
 
     steps:
       - name: echo_hello_world
+        uses: actions/checkout@v4
         run: echo "Hello, World!"
