@@ -3,7 +3,7 @@ name: My_First_Workflow
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   first_test:
