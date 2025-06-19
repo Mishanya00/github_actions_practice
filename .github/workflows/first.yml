@@ -19,6 +19,9 @@ jobs:
       - name: echo_hello_world
         run: echo "Hello, World!"
 
+      - name: test_python
+        run: python3
+
       - name: get_folder_contents
         run: ls -a
 
