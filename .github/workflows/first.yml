@@ -10,6 +10,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: echo_hello_world
+      - name: github-checkout
         uses: actions/checkout@v4
+      - name: echo_hello_world
         run: echo "Hello, World!"
