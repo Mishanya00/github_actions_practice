@@ -26,9 +26,13 @@ jobs:
         uses: snok/install-poetry@v1
         with:
           version: 2.1.3
+          virtualenvs-in-project: true
           virtualenvs-create: true
           poetry-no-interaction: true
           installer-parallel: true
+
+      - name: activate-venv
+        run: source .venv/bin/activate
 
       - name: install_packages
         run: poetry install
