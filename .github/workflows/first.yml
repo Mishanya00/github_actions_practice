@@ -12,5 +12,9 @@ jobs:
     steps:
       - name: github-checkout
         uses: actions/checkout@v4
+        
       - name: echo_hello_world
         run: echo "Hello, World!"
+
+      - name: get_folder_contents
+        run: ll -a
