@@ -18,3 +18,9 @@ jobs:
 
       - name: get_folder_contents
         run: ls -a
+
+      - name: retrieve_env_var
+        run: echo ${{ secrets.DONALD }}
+
+      - name: retrieve_secret
+        run: echo ${{ secrets.SECRET_DONALD }}
