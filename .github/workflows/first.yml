@@ -20,7 +20,7 @@ jobs:
         run: echo "Hello, World!"
 
       - name: test_python
-        run: python3
+        run: python3 main.py
 
       - name: get_folder_contents
         run: ls -a
