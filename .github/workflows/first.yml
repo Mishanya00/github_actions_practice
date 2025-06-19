@@ -12,13 +12,7 @@ jobs:
     steps:
       - name: github-checkout
         uses: actions/checkout@v4
-        
-      - name: echo_hello_world
-        run: echo "Hello, World!"
-
-      - name: test_python
-        run: python3 main.py
-
+      
       - name: get_folder_contents
         run: ls -a
 
@@ -27,3 +21,18 @@ jobs:
 
       - name: retrieve_secret
         run: echo ${{ secrets.SECRET_DONALD }}
+
+      - name: poetry-install-and-configure
+        uses: snok/install-poetry@v1
+        with:
+          version: 2.1.3
+          virtualenvs-create: false
+          poetry-no-interaction: true
+          installer-parallel: true
+
+      - name: install_packages
+        run: poetry install
+
+      - name: test_python
+        run: uvicorn main:app --host=0.0.0.0 --port=8000
+        
